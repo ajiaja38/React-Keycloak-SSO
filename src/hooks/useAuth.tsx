@@ -18,6 +18,7 @@ const useAuth = (): { isLogin: boolean } => {
 
     client.init({ onLoad: "login-required" }).then((auth: boolean) => {
       setIsLogin(auth);
+      console.log(client.token);
     });
   }, []);
 
